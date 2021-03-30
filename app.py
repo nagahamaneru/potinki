@@ -12,7 +12,8 @@ def kyuuyo():
 
 @app.route("/enn")
 def enn():
-    return render_template("enn.html")
+    en = request.args.get("en")
+    return render_template("enn.html", en=en)
 
 if __name__ == "__main__":
     app.run(debug=True)
